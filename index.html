@@ -2,7 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <script>
+      // This script sets the base href for the page to ensure that asset paths work correctly when deployed to GitHub Pages.
+      // It checks if the hostname is github.io and uses the first part of the path as the repository name.
+      const host = window.location.hostname;
+      if (host.includes('github.io')) {
+        const path = window.location.pathname;
+        const repo = path.split('/')[1];
+        if (repo) {
+          const base = document.createElement('base');
+          base.href = `/${repo}/`;
+          document.head.prepend(base);
+        }
+      }
+    </script>
+    <link rel="icon" type="image/svg+xml" href="vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sammy Jay</title>
     <script src="https://cdn.tailwindcss.com"></script>

@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{ 
-          backgroundImage: "url('https://source.unsplash.com/1920x1080/?technology,code,abstract')",
+          backgroundImage: "url('https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1920')",
           transform: `translateY(${offsetY * 0.5}px)` 
         }}
       />
